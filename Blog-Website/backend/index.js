@@ -1,13 +1,14 @@
-const express = require('express')
+import express, { json } from 'express';
 const app = express()
 const port = 5000
 
-const mongoDB = require("./db")
+import mongoDB from './db.js';
+import createUserRouter from './routes/createUser.js'
 
 mongoDB();
 
 app.use((req,res,next)=>{
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:8000");
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:7000");
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
@@ -20,9 +21,9 @@ app.get('/', (req, res) => {
 })
 
 
-app.use(express.json())
+app.use(json())
 
-app.use('/api',require('./Routes/createUser'));
+app.use('/api',createUserRouter);
 
 
 app.listen(port, () => {

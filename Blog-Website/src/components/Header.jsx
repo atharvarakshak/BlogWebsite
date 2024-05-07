@@ -22,7 +22,7 @@ const Nav = () => {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:3001/login", {
+      const response = await axios.post("http://localhost:5000/login", {
         email,
         password,
       });
@@ -93,7 +93,7 @@ const Nav = () => {
             <>
               <NavLink to="/">
                 <button className="btn bg-[#B95A00] hover:bg-[#ea9f59] text-white md:ml-8 font-semibold rounded  md:static ">
-                  My Orders
+                  My Blogs
                 </button>
               </NavLink>
             </>
@@ -113,7 +113,7 @@ const Nav = () => {
             <>
                <NavLink to="/">
                 <button className="btn bg-[#B95A00] hover:bg-[#ea9f59] text-white md:ml-8 font-semibold rounded  md:static ">
-                  MyCart
+                  New Blog
                 </button>
                 </NavLink>
               <NavLink to="/login">

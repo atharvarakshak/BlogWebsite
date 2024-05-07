@@ -1,4 +1,9 @@
-const mongoose = require("mongoose");
+
+import  mongoose from "mongoose";
+import dotenv from 'dotenv';
+dotenv.config();
+
+// const mongoURI = process.env.MONGO_URI;
 
 const mongoURI = 'mongodb+srv://atharvarakshak23:RHsIW2YQSe1BtX5f@cluster0.dlwp2a9.mongodb.net/blogwebsite?retryWrites=true&w=majority&appName=Cluster0'
 
@@ -25,4 +30,5 @@ const mongoDB = async()=>{
     })
 }
 
-module.exports = mongoDB
+
+export default mongoDB

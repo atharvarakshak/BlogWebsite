@@ -1,10 +1,10 @@
-const express = require('express')
+import express, { json } from 'express';
 const router = express.Router()
-const { body, validationResult } = require('express-validator');
-const user = require('../models/signup')
+import  { body, validationResult } from 'express-validator';
+import  user from '../models/signup.js'
 
-const bcrypt = require("bcryptjs")
-const jwt = require("jsonwebtoken")
+import  bcrypt from "bcryptjs"
+import  jwt from "jsonwebtoken"
 const jwtSecret = "MyNamensusd$jasjskjhas&hasajslkkas"
 
 router.post('/createuser', [
@@ -83,4 +83,5 @@ router.post('/login', [
         res.json({ success:false })
     }
 })
-module.exports = router;
+// module.exports = router;
+export default router
