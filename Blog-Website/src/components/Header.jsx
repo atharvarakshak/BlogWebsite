@@ -1,6 +1,6 @@
 import React from "react";
 
-import Darkmode from "../DarkMood/Darkmode";
+import Darkmode from './DarkMood/Darkmode';
 
 import { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
@@ -10,9 +10,10 @@ import {
   XMarkIcon,
   SunIcon,
 } from "@heroicons/react/24/solid";
+
 // import {Link} from react-router-dom
 
-import logo from "../../assets/logoDog.svg";
+// import logo from "../../assets/logoDog.svg";
 import { NavLink,useNavigate } from "react-router-dom";
 
 const Nav = () => {
@@ -58,9 +59,9 @@ const Nav = () => {
         {/* Logo section */}
         <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
           <a href="/">
-            <img className="" src={logo} alt="" />
+            
           </a>
-          <span className="text-white "> Pawfect</span>
+          <span className="text-white "> The Daily Pulse</span>
         </div>
         {/* Menu icon */}
         <div
