@@ -1,9 +1,10 @@
-import express, { json } from 'express';
+import express, { json } from "express";
 const app = express()
-const port = 5000
+const port = 5001
 
 import mongoDB from './db.js';
 import createUserRouter from './routes/createUser.js'
+import createBlog from './routes/createBlog.js'
 
 mongoDB();
 
@@ -24,6 +25,7 @@ app.get('/', (req, res) => {
 app.use(json())
 
 app.use('/api',createUserRouter);
+app.use('/api',createBlog);
 
 
 app.listen(port, () => {

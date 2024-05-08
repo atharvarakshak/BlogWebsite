@@ -7,8 +7,15 @@ const UserSchema = new Schema(
             required:true,
         },
         image:{
-            type:image
+            type:String,
+            required:true,
+        },
+        content:{
+            type:String,
+            required:true,
         }
+
 
     }
 )
+export default mongoose.model('blogs',UserSchema);

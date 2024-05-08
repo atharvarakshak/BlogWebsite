@@ -22,7 +22,7 @@ const Nav = () => {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("http://localhost:5001/login", {
         email,
         password,
       });
@@ -43,7 +43,7 @@ const Nav = () => {
     // { name: "CART", link: "/cart" },
     { name: "HELP", link: "/help" },
     { name: "ABOUT", link: "/about" },
-    { name: "FEEDBACK", link: "/feedback" },
+    
   ];
   let [open, setOpen] = useState(false);
 
@@ -92,7 +92,7 @@ const Nav = () => {
           {localStorage.getItem("authToken") ? (
             <>
               <NavLink to="/">
-                <button className="btn bg-[#B95A00] hover:bg-[#ea9f59] text-white md:ml-8 font-semibold rounded  md:static ">
+                <button className="btn  hover:bg-[#ea9f59] text-white md:ml-8 font-semibold rounded  md:static ">
                   My Blogs
                 </button>
               </NavLink>
@@ -104,15 +104,15 @@ const Nav = () => {
           {!localStorage.getItem("authToken") ? (
             <>
               <NavLink to="/signup">
-                <button className="btn  bg-[#B95A00] hover:bg-[#ea9f59] text-white md:ml-8 font-semibold   rounded duration-300 md:static  ">
+                <button className="btn   hover:bg-[#ea9f59] text-white md:ml-8 font-semibold   rounded duration-300 md:static  ">
                   Signup
                 </button>
               </NavLink>
             </>
           ) : (
             <>
-               <NavLink to="/">
-                <button className="btn bg-[#B95A00] hover:bg-[#ea9f59] text-white md:ml-8 font-semibold rounded  md:static ">
+               <NavLink to="/newblog">
+                <button className="btn  hover:bg-[#ea9f59] text-white md:ml-8 font-semibold rounded  md:static ">
                   New Blog
                 </button>
                 </NavLink>
