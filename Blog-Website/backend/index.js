@@ -5,6 +5,14 @@ const port = 5001
 import mongoDB from './db.js';
 import createUserRouter from './routes/createUser.js'
 import createBlog from './routes/createBlog.js'
+import bodyParser from 'body-parser';
+
+
+
+// Increase the maximum request size (e.g., 10MB)
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: true }));  
+
 
 mongoDB();
 
@@ -25,6 +33,7 @@ app.get('/', (req, res) => {
 app.use(json())
 
 app.use('/api',createUserRouter);
+
 app.use('/api',createBlog);
 
 

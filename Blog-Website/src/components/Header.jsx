@@ -91,7 +91,7 @@ const Nav = () => {
 
           {localStorage.getItem("authToken") ? (
             <>
-              <NavLink to="/">
+              <NavLink to="/myblogs">
                 <button className="btn  hover:bg-[#ea9f59] text-white md:ml-8 font-semibold rounded  md:static ">
                   My Blogs
                 </button>

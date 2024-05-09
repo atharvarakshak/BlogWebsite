@@ -10,6 +10,7 @@ import Signup from './components/login/Signup.jsx'
 import About from './components/About.jsx'
 import Help from './components/Help.jsx'
 import NewBlogForm from './components/NewBlogForm.jsx'
+import MyBlogs from './components/MyBlogs.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +24,7 @@ const router = createBrowserRouter(
       <Route path='/about' element={<About/>} />
       <Route path='/help' element={<Help/>} />
       <Route path='/newblog' element={<NewBlogForm/>} />
+      <Route path='/myblogs' element={<MyBlogs/>} />
     
     
     </Route>
