@@ -32,8 +32,8 @@ router.post('/myblogs',async (req,res)=>
 {
 
     try{
-        let myBlog = await blog.findOne({'email':req.body.email}) ;
-        res.json(myBlog)
+        let myBlog = await blog.find({'email':req.body.email}) ;
+        res.send(myBlog)
         
         // res.json({success:true});
      }
@@ -42,5 +42,30 @@ router.post('/myblogs',async (req,res)=>
         res.json({success:false})
      }
 })
+router.post('/homeblogs',async (req,res)=>
+{
+
+    try{
+        let myBlog = await blog.find() ;
+        res.send(myBlog)
+        
+        // res.json({success:true});
+     }
+     catch(error){
+        console.log(error);
+        res.json({success:false})
+     }
+})
+
+router.post('/deleteblog', async (req, res) => {
+    try {
+        await blog.deleteOne({ _id: req.body.id });
+        res.json({ success: true});
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false});
+    }
+});
+
 
 export default router;

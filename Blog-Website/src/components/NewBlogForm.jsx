@@ -49,7 +49,7 @@ const NewBlogForm = () => {
       console.log(json);
       
       if (json.success) {
-       
+       alert("Blog created successfully!")
         navigate("/")
   
       }
@@ -103,7 +103,7 @@ const NewBlogForm = () => {
             <button
               type="button"
               onClick={() => fileInputRef.current && fileInputRef.current.click()}
-              className="border-2 bg-blue-300 rounded-md p-1"
+              className="border-2 bg-blue-500 text-white rounded-md p-1"
             >
               Upload
             </button>
