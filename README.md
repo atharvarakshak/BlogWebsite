@@ -31,7 +31,7 @@ Before you begin, make sure you have the following installed on your system:
 3. Create a `.env` file in the `backend` directory and add your MongoDB URI as `MONGO_URI`.
 example:
     ```
-    MONGO_URI=mongodb+srv://<username>:<password>@cluster0.dlwp2a9.mongodb.net/<databse>?retryWrites=true&w=majority&appName=Cluster0  
+    MONGO_URI=mongodb+srv://<username>:<password>@cluster0.dlwp2a9.mongodb.net/blogwebsite?retryWrites=true&w=majority&appName=Cluster0  
     ```
 4. Start the backend server by running `npm start`.
     ```bash
