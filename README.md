@@ -58,3 +58,7 @@ example:
 
 ## Usage
 Once the backend and frontend servers are running, you can access the blog website in your browser. Users can register, log in, create new blog posts, view their own blogs,  and delete blogs.
+
+
+##Home page
+<img width="944" alt="image" src="https://github.com/atharvarakshak/BlogWebsite/assets/115388098/5fff3918-03e0-48de-ac02-3d1a0e172fde">
